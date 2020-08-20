@@ -1,71 +1,88 @@
 <!DOCTYPE html>
+
 <head>
     <title>menu-item-list-admin</title>
-    
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="truyum-ui/style/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Public+Sans&display=swap" rel="stylesheet"> 
 </head>
+
 <body>
-    <aside>
+    <header>
+        <ul> <!--add all list inline-->
+            <li id="logo-name">truYum</li>
+            <li><img src="truyum-ui/images/fork.png" alt="truYum" height="80px" width="80px"></li>
+            <li class="link-menu"><a href="menu-item-list-admin.html">Menu</a></li>
+        </ul>
+    </header>
+
+    <article>
         <h1>Menu Item</h1>
+
         <table>
-            <tr class="table-heading">
-                <th>Name</th>
-                <th>Price</th>
+            <tr>
+                <th class="align-name-left">Name</th>
+                <th class="align-price-right">Price</th>
                 <th>Active</th>
                 <th>Date of Launch</th>
                 <th>Category</th>
                 <th>Free Delivery</th>
+                <th>Action</th>
             </tr>
 
-            <tr class="table-content">
-                <td>Sandwich</td>
-                <td>Rs. 99.00</td>
+            <tr>
+                <td class="align-name-left">Sandwich</td>
+                <td class="align-price-right">Rs. 99.00</td>
                 <td>Yes</td>
                 <td>15/03/2017</td>
                 <td>Main Course</td>
                 <td>Yes</td>
-                <td><a href="#">Edit</a></td>
+                <td><a href="edit-menu-item.html">Edit</a></td>
             </tr>
 
-            <tr class="table-content">
-                <td>Burger</td>
-                <td>Rs. 129.00</td>
+            <tr>
+                <td class="align-name-left">Burger</td>
+                <td class="align-price-right">Rs. 129.00</td>
                 <td>Yes</td>
                 <td>23/12/2017</td>
                 <td>Main Course</td>
                 <td>No</td>
-                <td><a href="#">Edit</a></td>
+                <td><a href="edit-menu-item.html">Edit</a></td>
             </tr>
 
-            <tr class="table-content"></tr>
-                <td>Pizza</td>
-                <td>Rs. 149.00</td>
+            <tr>
+                <td class="align-name-left">Pizza</td>
+                <td class="align-price-right">Rs. 149.00</td>
                 <td>Yes</td>
                 <td>21/08/2017</td>
                 <td>Main Course</td>
                 <td>No</td>
-                <td><a href="#">Edit</a></td>
+                <td><a href="edit-menu-item.html">Edit</a></td>
             </tr>
 
-            <tr class="table-content">
-                <td>French Fries</td>
-                <td>Rs. 57.00</td>
+            <tr>
+                <td class="align-name-left">French Fries</td>
+                <td class="align-price-right">Rs. 57.00</td>
                 <td>No</td>
                 <td>02/07/2017</td>
                 <td>Starters</td>
                 <td>Yes</td>
-                <td><a href="#">Edit</a></td>
+                <td><a href="edit-menu-item.html">Edit</a></td>
             </tr>
 
-            <tr class="table-content">
-                <td>Chocolate Brownie</td>
-                <td>Rs. 32.00</td>
+            <tr>
+                <td class="align-name-left">Chocolate Brownie</td>
+                <td class="align-price-right">Rs. 32.00</td>
                 <td>Yes</td>
                 <td>02/11/2022</td>
                 <td>Dessert</td>
                 <td>Yes</td>
-                <td><a href="#">Edit</a></td>
+                <td><a href="edit-menu-item.html">Edit</a></td>
             </tr>
-            
         </table>
-    </aside> 
+    </article> 
+    
+    <footer>
+        <p class="footer-copyright">Copyright &copy; 2020</p>
+    </footer>
 </body>

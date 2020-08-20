@@ -1,7 +1,65 @@
 html {
     font-family: 'Public Sans', sans-serif;
     height: auto;
-    background-color: #ffffff;
     /* font-family: Sentinel SSm A, Sentinel SSm B, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;
     */
+}
+
+body {
+	margin: 0;
+	padding: 0;
+}
+
+header {
+	background-color: #1c4996;
+	margin: auto;
+	height: 20%;
+	width: 100%;
+}
+
+a {
+	text-decoration: none;
+	color: #000000;
+}
+
+
+ul {
+	align-content: center;
+	margin: auto;					/*due to this header touched to top end*/
+	padding: 0;
+	border: 0;
+	width: 100%;
+	color: #ffffff;
+}
+
+ul li {
+	display: inline;
+	list-style: none;
+	align-content: center;
+	vertical-align: middle;					/*most imp*/
+	padding: 30px 5px 10px 20px;
+}
+
+#logo-name {
+	font-size: 3em;
+}
+
+.link-menu {
+	float: right;
+	margin: 0px 20px;
+	margin-top: 2%;
+	padding: 10px 26px;
+	background-color: papayawhip;
+	color: #000000;
+	font-weight: 300;
+	display: inline-block;
+	text-decoration: none;
+}
+
+.link-menu > a:hover {			/*subclass*/
+	color: #ffffff;
+}
+
+.link-menu:hover {
+	background-color: brown;
 }
