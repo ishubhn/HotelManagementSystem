@@ -83,11 +83,19 @@ h1 {
 	font-size: 24px;
 }
 
-#edit-menu-status {
+#edit-menu-status, #edit-addCart-status, #cart-empty-status, #edit-removeCart-status {
 	margin:	50px 55px;
 	font-size: 18px;
 	font-weight: 300;
 	color: firebrick;
+}
+
+#edit-addCart-status, #edit-removeCart-status {
+	text-align: center;
+}
+
+#menu-customer-link {
+	background-color: darkcyan;
 }
 
 table {
@@ -315,10 +323,11 @@ footer {
 	background-color: #005073;
 	color: #ffffff;
 	position: absolute;
+	text-align: start;
 	bottom: 0;
 	width: 100%;
 	height: 3rem;										/*footer-height:3rem*/
 	padding-left: 0.1e;
-	padding-right: 0;
+	vertical-align: middle;
 }
 

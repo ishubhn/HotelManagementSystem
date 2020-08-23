@@ -1,7 +1,7 @@
 <!DOCTYPE html>
-
+<html>
 <head>
-    <title>Menu Items</title>
+    <title>Cart</title>
     <meta charset="UTF-8">
     <link rel="stylesheet" type="text/css" href="style/style.css">
     <link href="https://fonts.googleapis.com/css?family=Public+Sans&display=swap" rel="stylesheet"> 
@@ -20,14 +20,13 @@
 			</header>
 
 			<article>
-				<h1>Menu Items</h1>
+				<h1>Cart</h1>
 
 				<table>
 					<tr>
 						<th class="align-name-left">Name</th>
 						<th>Free Delivery</th>
 						<th class="align-price-right">Price</th>
-						<th>Category</th>
 						<th>Action</th>
 					</tr>
 
@@ -35,26 +34,30 @@
 						<td class="align-name-left">Sandwich</td>
 						<td>Yes</td>
 						<td class="align-price-right">Rs. 99.00</td>
-						<td>Main Course</td>
-						<td><a href="menu-item-list-customer-notification.html">Add to Cart</a></td>
+						<td><a href="cart-notification.html">Delete</a></td>
 					</tr>
 
 					<tr>
 						<td class="align-name-left">Burger</td>
 						<td>No</td>
 						<td class="align-price-right">Rs. 129.00</td>
-						<td>Main Course</td>
-						<td><a href="menu-item-list-customer-notification.html">Add to Cart</a></td>
+						<td><a href="cart-notification.html">Delete</a></td>
 					</tr>
 
 					<tr>
 						<td class="align-name-left">Pizza</td>
 						<td>No</td>
 						<td class="align-price-right">Rs. 149.00</td>
-						<td>Main Course</td>
-						<td><a href="menu-item-list-customer-notification.html">Add to Cart</a></td>
+						<td><a href="cart-notification.html">Delete</a></td>
 					</tr>
 
+					<tr>
+						<th></th>
+						<th>Total</th>
+						<th class="align-price-right">Rs. 377.00</th>
+						<th></th>
+					</tr>
+					
 				</table>
 			</article> 
     	</div>
@@ -63,3 +66,6 @@
 		</footer>
 	</div>
 </body>
+
+</html>
+<!--Window.alert is remaining for deleting the item (getDocumentById.innerHtml-->
