@@ -83,6 +83,13 @@ h1 {
 	font-size: 24px;
 }
 
+#edit-menu-status {
+	margin:	50px 55px;
+	font-size: 18px;
+	font-weight: 300;
+	color: firebrick;
+}
+
 table {
 	margin: 30px 55px;
 	width: 90%;
