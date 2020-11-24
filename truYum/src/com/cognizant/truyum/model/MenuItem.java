@@ -58,12 +58,12 @@ public class MenuItem {
 		this.active = active;
 	}
 
-	public Date getDataOfLaunch() {
+	public Date getDateOfLaunch() {
 		return dateOfLaunch;
 	}
 
-	public void setDataOfLaunch(Date dataOfLaunch) {
-		this.dateOfLaunch = dataOfLaunch;
+	public void setDateOfLaunch(Date dateOfLaunch) {
+		this.dateOfLaunch = dateOfLaunch;
 	}
 
 	public String getCategory() {
