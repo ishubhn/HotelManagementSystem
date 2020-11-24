@@ -2,23 +2,26 @@ package com.cognizant.truyum.model;
 
 import java.util.Date;
 
+import com.cognizant.truyum.util.DateUtil;
+
 public class MenuItem {
 	private long id;
 	private String name;
 	private float price;
 	private boolean active;
-	private Date dataOfLaunch;
+	private Date dateOfLaunch;
 	private String category;
 	private boolean freeDelivery;
 
-	public MenuItem(long id, String name, float price, boolean active, Date dataOfLaunch, String category,
-			boolean freeDelivery) {
+	public MenuItem(long id, String name, float price, boolean active, String dateOfLaunch, String category,
+			boolean freeDelivery) throws Exception {
 		super();
+		
 		this.id = id;
 		this.name = name;
 		this.price = price;
 		this.active = active;
-		this.dataOfLaunch = dataOfLaunch;
+		this.dateOfLaunch = DateUtil.convertToDate(dateOfLaunch);
 		this.category = category;
 		this.freeDelivery = freeDelivery;
 	}
@@ -56,11 +59,11 @@ public class MenuItem {
 	}
 
 	public Date getDataOfLaunch() {
-		return dataOfLaunch;
+		return dateOfLaunch;
 	}
 
 	public void setDataOfLaunch(Date dataOfLaunch) {
-		this.dataOfLaunch = dataOfLaunch;
+		this.dateOfLaunch = dataOfLaunch;
 	}
 
 	public String getCategory() {
@@ -82,7 +85,7 @@ public class MenuItem {
 	@Override
 	public String toString() {
 		return "MenuItem [id=" + id + ", name=" + name + ", price=" + price + ", active=" + active + ", dataOfLaunch="
-				+ dataOfLaunch + ", category=" + category + ", freeDelivery=" + freeDelivery + "]";
+				+ dateOfLaunch + ", category=" + category + ", freeDelivery=" + freeDelivery + "]";
 	}
 
 	@Override
