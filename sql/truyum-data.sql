@@ -88,4 +88,4 @@ where u.user_id = 002;
 
 /*6. REMOVE ITEM FROM USER CART*/
 /*a. query to remove menuitem from cart based on userID and menuItemId*/
-delete from cart where user_Id = "002" and menuItem_Id = "2";
+delete from cart where user_Id = "002" and menuItem_Id = "2";Select * from menu_item groupby id
