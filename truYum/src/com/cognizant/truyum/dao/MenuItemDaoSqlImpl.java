@@ -1,13 +1,16 @@
 package com.cognizant.truyum.dao;
 
+import java.awt.image.DataBufferByte;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.List;
 
 import com.cognizant.truyum.model.MenuItem;
+import com.cognizant.truyum.util.DateUtil;
 
 public class MenuItemDaoSqlImpl implements MenuItemDao {
 
@@ -73,7 +76,7 @@ public class MenuItemDaoSqlImpl implements MenuItemDao {
 			String query = "SELECT * FROM MENU_ITEM WHERE MENUITEMID = ?";
 			menuItem = new MenuItem();
 			menuItemList = new ArrayList<MenuItem>();
-			
+
 			st = ConnectionHandler.getConnection().prepareStatement(query);
 			st.setLong(1, menuItemId);
 			rs = st.executeQuery();
@@ -87,17 +90,31 @@ public class MenuItemDaoSqlImpl implements MenuItemDao {
 				menuItem.setCategory(rs.getString(6));
 				menuItem.setFreeDelivery(rs.getBoolean(7));
 			}
-			
+
 		} catch (SQLException e) {
 			e.printStackTrace();
-		} 
-		
+		}
+
 		return menuItem;
 	}
 
 	@Override
 	public void modifyMenuItem(MenuItem menuItem) {
+		SimpleDateFormat df = new SimpleDateFormat("dd/MM/yyyy");
+		String date = df.format(menuItem.getDateOfLaunch());
+
+		String query = "UPDATE MENU_ITEM SET TITLE = " + menuItem.getName() + ", PRICE = " + menuItem.getPrice()
+				+ ", ISACTIVE = " + menuItem.isActive() + ", DATEOFLAUNCH = " + date
+				+ ", CATEGORY = " + menuItem.getCategory() + ", ISFREEDELIVERY = " + menuItem.isFreeDelivery()
+				+ " WHERE MENUITEMID = " + menuItem.getId();
 		
+		try {
+			st = ConnectionHandler.getConnection().prepareStatement(query);
+			st.executeUpdate();
+			
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
 	}
 
 }
